@@ -12,17 +12,24 @@ import RequireAdmin from './components/Common/AuthAdmin/RequireAdmin';
 import Dashboard from './components/Dashboard/Dashboard';
 import AddAdmin from './components/Dashboard/AddAdmin';
 import AddProduct from './components/Dashboard/AddProduct';
+import PrivacyPolicy from './components/Common/Footer/PrivacyPolicy';
+import ToolPurchase from './components/Common/Order/ToolPurchase';
 
 function App() {
   return (
     <div>
       <Header>
         <Routes>
+
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+
+
+
           {/* <Route path="/blogs" element={<Blogs />} /> */}
 
           <Route path="/blogs" element={
@@ -31,13 +38,24 @@ function App() {
             </RequireAuth>
           } />
 
-          
+
+          <Route path="/purchase/:id" element={
+            // <RequireAuth>
+              <ToolPurchase />
+            // </RequireAuth>
+          } />
+
+
+
+
+
+
+
+
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="add-admin" element={<AddAdmin />} />
             <Route path="add-product" element={<AddProduct />} />
           </Route>
-
-
 
         </Routes>
         <Footer></Footer>

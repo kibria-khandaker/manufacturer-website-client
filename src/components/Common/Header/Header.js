@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import useAdmin from '../../../hooks/useAdmin';
 import logoImg from '../../../img/logo192.png'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = ({ children }) => {
+    const [user] = useAuthState(auth);
     const [dark, setDark] = useState(false);
     const [admin] = useAdmin()
     const { pathname } = useLocation();
@@ -14,14 +18,14 @@ const Header = ({ children }) => {
             <div className="drawer-content flex flex-col">
                 {/* <!-- Navbar --> */}
                 <div className="w-full navbar bg-base-100 z-50 fixed top-0 lg:px-20">
-                   { pathname.includes("dashboard") &&
-                        <label for="dashboard-drawer-2" tabindex="0" className="btn btn-ghost btn-circle  lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                    {pathname.includes("dashboard") &&
+                        <label for="dashboard-drawer-2" tabIndex="0" className="btn btn-ghost btn-circle  lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                         </label>
                     }
                     {/* branding or Logo  */}
                     <div className="flex-1 px-2 mx-2 text-2xl"> <img className=' w-20' src={logoImg} alt="" /> </div>
-                    
+
                     {/* Hamburg Icon for main menu responsive */}
                     <div className="flex-none lg:hidden">
                         <label htmlFor="my-menu-drawer-3" className="btn btn-square btn-ghost">
@@ -35,19 +39,29 @@ const Header = ({ children }) => {
                             {/* <!-- Navbar menu content here --> */}
                             <li><NavLink to='/home' className='rounded-lg'> Home </NavLink></li>
 
-                            {/* {admin && <li><NavLink to='/dashboard' className='rounded-lg'> Dashboard </NavLink></li>} */}
                             {admin && <li><NavLink to='/dashboard' className='rounded-lg'> Dashboard </NavLink></li>}
 
                             <li><NavLink to='/about' className='rounded-lg'> About </NavLink></li>
                             <li><NavLink to='/signup' className='rounded-lg'> SignUp </NavLink></li>
                             <li><NavLink to='/blogs' className='rounded-lg'> Blogs </NavLink></li>
-                            <li><NavLink to='/login' className='rounded-lg'> Login </NavLink></li>
+                            {
+                                user ?
+                                    <>
+                                    <li> <NavLink onClick={() => signOut(auth)} to="/login" className='rounded-lg'>LogOut</NavLink></li>
+                                       
+                                    </>
+                                    :
+                                    <>
+                                        <li><NavLink to='/login' className='rounded-lg'> Login </NavLink></li>
+                                    </>
+                            }
+
                             {/* Dropdown btn  */}
                             <li className="dropdown dropdown-hover  dropdown-end">
-                                <label tabindex="0" className="btn btn-primary btn-outline rounded-lg uppercase">Book Now</label>
-                                <ul tabindex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><NavLink to='/contact' Link className='rounded-lg'> Contact </NavLink></li>
-                                    <li><NavLink to='/login' Link className='rounded-lg'> Login </NavLink></li>
+                                <label tabIndex="0" className="btn btn-primary btn-outline rounded-lg uppercase">Book Now</label>
+                                <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                    <li><NavLink to='/contact' className='rounded-lg'> Contact </NavLink></li>
+                                    <li><NavLink to='/login' className='rounded-lg'> Login </NavLink></li>
                                 </ul>
                             </li>
                             {/* dark/light theme btn icon  */}
@@ -74,11 +88,11 @@ const Header = ({ children }) => {
                     <li><NavLink to='/services' className='rounded-lg'> Services </NavLink></li>
                     <li><NavLink to='/login' className='rounded-lg'> Login </NavLink></li>
 
-                    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                        <div class="collapse-title text-xl font-medium">
+                    <div tabIndex="0" className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                        <div className="collapse-title text-xl font-medium">
                             Book Now
                         </div>
-                        <div class="collapse-content">
+                        <div className="collapse-content">
                             <li><NavLink to='/services' className='rounded-lg'> Quick book </NavLink></li>
                             <li><NavLink to='/login' className='rounded-lg'> Pre Book </NavLink></li>
                         </div>
