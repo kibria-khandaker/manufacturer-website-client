@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import About from './components/About';
 import Blogs from './components/Blogs/Blogs';
@@ -13,6 +14,7 @@ import AddReview from './components/Dashboard/AddReview';
 import Dashboard from './components/Dashboard/Dashboard';
 import MyOrders from './components/Dashboard/MyOrders';
 import MyProfile from './components/Dashboard/MyProfile';
+import Users from './components/Dashboard/Users';
 import Home from './components/Home/Home';
 
 function App() {
@@ -54,12 +56,14 @@ function App() {
             <Route index element={<MyOrders />} />
             <Route path="MyProfile" element={<MyProfile />} />
             <Route path="AddReview" element={<AddReview />} />
+            <Route path="users" element={<Users />} />
           </Route>
           {/* Dash board Route end */}
 
         </Routes>
         <Footer></Footer>
       </Header>
+
     </div>
   );
 }

@@ -5,6 +5,7 @@ import logoImg from '../../../img/logo192.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
+import { ToastContainer } from 'react-toastify';
 
 const Header = ({ children }) => {
     const [user, loading, error] = useAuthState(auth);
@@ -111,7 +112,7 @@ const Header = ({ children }) => {
 
                 </ul>
             </div>
-
+            <ToastContainer />
         </div>
     );
 };
