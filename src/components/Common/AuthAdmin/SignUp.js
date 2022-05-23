@@ -72,7 +72,7 @@ const SignUp = () => {
                     :
                     <div className="card w-96 bg-base-100 shadow-xl">
                         <div className="card-body">
-                            <h2 className=" text-center text-2xl font-bold"> Sign Up </h2>
+                            <h2 className=" text-center text-2xl font-bold textClr"> Sign Up </h2>
                             <div>
                                 <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -152,7 +152,7 @@ const SignUp = () => {
 
                                     {signInError}
                                     {/* xxxxxxxxxxxx submit Btn xxxxxxxxxxxx */}
-                                    <input className="btn w-full max-w-xs font-light text-xl mt-4" type="submit" value='Sign Up' />
+                                    <input className="btn btnBgClr text-white w-full max-w-xs font-light text-xl mt-4" type="submit" value='Sign Up' />
 
                                 </form>
                                 <p className='p-1'> <small>  Already Have an Account? <Link className=' text-secondary' to={'/login'}> Please Login </Link></small> </p>
@@ -160,7 +160,7 @@ const SignUp = () => {
                             <div className="divider">OR</div>
                             <button
                                 onClick={() => signInWithGoogle()}
-                                className="btn btn-outline"> CONTINUE WITH GOOGLE </button>
+                                className="btn btn-outline textClr"> CONTINUE WITH GOOGLE </button>
                         </div>
                     </div>
             }

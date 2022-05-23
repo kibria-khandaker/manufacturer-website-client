@@ -70,7 +70,7 @@ const Header = ({ children }) => {
 
                             {/* Dropdown btn  */}
                             <li className="dropdown dropdown-hover  dropdown-end">
-                                <label tabIndex="0" className="btn btn-primary btn-outline rounded-lg uppercase">Book Now</label>
+                                <label tabIndex="0" className="btn textClr btn-outline rounded-lg uppercase">Book Now</label>
                                 <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><NavLink to='/contact' className='rounded-lg'> Contact </NavLink></li>
                                     <li><NavLink to='/login' className='rounded-lg'> Login </NavLink></li>

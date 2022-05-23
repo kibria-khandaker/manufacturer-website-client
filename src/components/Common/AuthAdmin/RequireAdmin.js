@@ -9,7 +9,9 @@ import LoadingSpinner from './LoadingSpinner';
 
 const RequireAdmin = ({ children }) => {
     const [user, loading] = useAuthState(auth);
+
     const [admin, adminLoading] = useAdmin(user)
+
     const location = useLocation()
 
     if (loading || adminLoading) {
@@ -18,7 +20,7 @@ const RequireAdmin = ({ children }) => {
 
     if (!user || !admin) {
         signOut(auth);
-        // localStorage.removeItem('accessToken');
+        localStorage.removeItem('accessToken');
         return <Navigate to="/login" state={{ from: location }} replace />;
     }
     return children;

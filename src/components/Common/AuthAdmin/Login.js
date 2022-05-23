@@ -59,7 +59,7 @@ const Login = () => {
         <section className='flex justify-center items-center py-44 '>
             <div className="card w-96 bg-base-100 shadow-xl border-x">
                 <div className="card-body">
-                    <h2 className=" text-center text-2xl font-bold"> Login </h2>
+                    <h2 className=" text-center text-2xl font-bold textClr"> Login </h2>
                     <div>
                         <form onSubmit={handleSubmit(onSubmit)}>
 
