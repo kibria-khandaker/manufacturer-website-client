@@ -2,7 +2,7 @@ import { useQuery } from 'react-query';
 
 const useSingleTools = (id) => {
     const { data: singleTool, isLoading, refetch } = useQuery('repoData', () =>
-        fetch(`http://localhost:4000/tools/${id}`).then(res =>
+        fetch(`http://localhost:5000/tools/${id}`).then(res =>
             res.json()
         )
     )

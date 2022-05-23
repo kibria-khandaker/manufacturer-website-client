@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LoadingSpinner from './LoadingSpinner';
 import auth from './../../../firebase.init';
+import useToken from '../../../hooks/useToken';
+import { useEffect } from 'react';
 
 
 const Login = () => {
@@ -19,22 +21,22 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    // const [token] =useToken(user || gUser)
+    const [token] =useToken(user || gUser)
 
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || '/';
 
-    // useEffect(() => {
-    //     if (token) {
-    //         navigate(from, { replace: true });
-    //         // console.log(user || gUser);
-    //     }
-    // }, [token,from,navigate])
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+            // console.log(user || gUser);
+        }
+    }, [token,from,navigate])
 
     let signInError;
 
-    // if ( true || loading || gLoading) {
+
     if (loading || gLoading) {
         return <LoadingSpinner></LoadingSpinner>
     }
@@ -43,10 +45,10 @@ const Login = () => {
         signInError = <p className=' text-red-500 p-1'><small>{error?.message || gError?.message}</small></p>
     }
 
-    if (user || gUser) {
-        navigate(from, { replace: true });
-        // console.log(user || gUser);
-    }
+    // if (user || gUser) {
+    //     navigate(from, { replace: true });
+    //     // console.log(user || gUser);
+    // }
 
     const onSubmit = data => {
         console.log(data);
@@ -55,7 +57,7 @@ const Login = () => {
 
     return (
         <section className='flex justify-center items-center py-44 '>
-            <div className="card w-96 bg-base-100 shadow-xl border-x min-h-screen">
+            <div className="card w-96 bg-base-100 shadow-xl border-x">
                 <div className="card-body">
                     <h2 className=" text-center text-2xl font-bold"> Login </h2>
                     <div>

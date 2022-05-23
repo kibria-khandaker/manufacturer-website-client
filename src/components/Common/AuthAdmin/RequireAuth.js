@@ -1,16 +1,20 @@
 import React from 'react';
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Navigate, useLocation } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import LoadingSpinner from './LoadingSpinner';
 
-const RequireAuth = () => {
+const RequireAuth = ({ children }) => {
 
-    const location = useLocation()
-    const user = false;  // false ,  true
-
+    const [user, loading] = useAuthState(auth)
+    const location = useLocation();
+    if (loading) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
     if (!user) {
-        return <Navigate to='/login' state={{ from: location }} replace />
-    };
-    // return children;
-    return <Outlet />;
+        return <Navigate to='/login' state={{ from: location }} replace ></Navigate>
+    }
+    return children;
 
 };
 

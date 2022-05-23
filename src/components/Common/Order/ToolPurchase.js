@@ -1,35 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from './../../../firebase.init';
+import Order from './Order';
 
 const ToolPurchase = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const [count, setCount] = useState(0)
+
+    //-----------------------------
     const { id } = useParams();
 
-    const { data: purchaseTool, isLoading, refetch } = useQuery('purchaseTool', () => fetch(`http://localhost:4000/tools/${id}`).then(res => res.json()))
+    const { data: purchaseTool, isLoading, refetch } =
+        useQuery('purchaseTool', () =>
+            fetch(`http://localhost:5000/tools/${id}`).then(res => res.json()))
     if (isLoading) {
         return <p> Loading ....!</p>
     }
-    const { name, email, category, supplier, price, quantity, minimumOrder, quality, img, shortDesc } = purchaseTool;
 
+    // const [purchaseTool, setPurchaseTool] = useState([]);
+    // useEffect(() => {
+    //     const url = `http://localhost:5000/tools/${id}`;
+    //     fetch(url)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setPurchaseTool(data)
+    //         })
+    // }, [id]);
+    // console.log(purchaseTool);
 
     return (
-        <div className='my-40 px-20' >
+        <div className='my-40 px-20 lg:flex gap-20' >
 
-            <div class="card w-2/6 bg-base-100 shadow-xl">
-                <div class="card-body">
+            <div className="card w-6/6 lg:w-2/6 bg-base-100 shadow-xl">
+                <div className="card-body">
                     <h3 className="text-xl text-[#fd4475] py-4 mb-4 flex justify-between border-y border-[#fd4475] font-semibold">
-                        {name}
+                        {purchaseTool.name}
                         <span>
-                            <sub className=' text-xs'>Price</sub>{price}$
+                            <sub className=' text-xs'>Price</sub>{purchaseTool.price}$
                         </span>
                     </h3>
-                    <p className=""> Product Type : <b> {quality}</b></p>
-                    <p className=""> Available the Product : <b> {quantity}</b></p>
-                    <p className="">  Need to Minimum Order Quantity: <b>{minimumOrder}</b></p>
-                    <p className="py-4 my-4 border-y border-[#fd4475] "> <b> Description : </b> {shortDesc}</p>
+                    <p className=""> Product Name : <b> {purchaseTool.name} </b></p>
+                    <p className=""> Price : <b> ${purchaseTool.price}</b></p>
+                    <p className=""> Product Type : <b> {purchaseTool.quality}</b></p>
+                    <p className=""> Available the Product : <b> {purchaseTool.quantity}</b></p>
+                    <p className="">  Need to Minimum Order Quantity: <b>{purchaseTool.minimumOrder}</b></p>
+                    <p className="py-4 my-4 border-y border-[#fd4475] "> <b> Description : </b> {purchaseTool.shortDesc}</p>
                 </div>
-                <figure><img src={img} alt="purchaseImg" /></figure>
+                <figure><img src={purchaseTool.img} alt="purchaseImg" /></figure>
             </div>
+            <Order
+                // refetch={refetch}
+                purchaseTool={purchaseTool}
+            ></Order>
         </div>
     );
 };

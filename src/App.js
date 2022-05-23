@@ -3,17 +3,17 @@ import './App.css';
 import About from './components/About';
 import Blogs from './components/Blogs/Blogs';
 import Login from './components/Common/AuthAdmin/Login';
+import RequireAuth from './components/Common/AuthAdmin/RequireAuth';
 import SignUp from './components/Common/AuthAdmin/SignUp';
 import Footer from './components/Common/Footer/Footer';
-import Header from './components/Common/Header/Header';
-import Home from './components/Home/Home';
-import RequireAuth from './components/Common/AuthAdmin/RequireAuth';
-import RequireAdmin from './components/Common/AuthAdmin/RequireAdmin';
-import Dashboard from './components/Dashboard/Dashboard';
-import AddAdmin from './components/Dashboard/AddAdmin';
-import AddProduct from './components/Dashboard/AddProduct';
 import PrivacyPolicy from './components/Common/Footer/PrivacyPolicy';
+import Header from './components/Common/Header/Header';
 import ToolPurchase from './components/Common/Order/ToolPurchase';
+import AddReview from './components/Dashboard/AddReview';
+import Dashboard from './components/Dashboard/Dashboard';
+import MyOrders from './components/Dashboard/MyOrders';
+import MyProfile from './components/Dashboard/MyProfile';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -38,24 +38,24 @@ function App() {
             </RequireAuth>
           } />
 
-
           <Route path="/purchase/:id" element={
-            // <RequireAuth>
+            <RequireAuth>
               <ToolPurchase />
-            // </RequireAuth>
+            </RequireAuth>
           } />
 
-
-
-
-
-
-
-
-          <Route path="/dashboard" element={<Dashboard />}>
-            <Route path="add-admin" element={<AddAdmin />} />
-            <Route path="add-product" element={<AddProduct />} />
+          {/* Dash board Route start */}
+          <Route path='/dashboard' element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }>
+            {/* <Route path="MyOrders" element={<MyOrders />} /> */}
+            <Route index element={<MyOrders />} />
+            <Route path="MyProfile" element={<MyProfile />} />
+            <Route path="AddReview" element={<AddReview />} />
           </Route>
+          {/* Dash board Route end */}
 
         </Routes>
         <Footer></Footer>
