@@ -44,7 +44,7 @@ const ToolPurchase = () => {
                     </h3>
                     <p className=""> Product Name : <b> {purchaseTool.name} </b></p>
                     <p className=""> Price : <b> ${purchaseTool.price}</b></p>
-                    <p className=""> Product Type : <b> {purchaseTool.quality}</b></p>
+                    <p className=""> Product Type : <b> {purchaseTool.category}</b></p>
                     <p className=""> Available the Product : <b> {purchaseTool.quantity}</b></p>
                     <p className="">  Need to Minimum Order Quantity: <b>{purchaseTool.minimumOrder}</b></p>
                     <p className="py-4 my-4 border-y border-[#fd4475] "> <b> Description : </b> {purchaseTool.shortDesc}</p>
