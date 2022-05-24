@@ -15,14 +15,14 @@ const ToolPurchase = () => {
 
     const { data: purchaseTool, isLoading, refetch } =
         useQuery('purchaseTool', () =>
-            fetch(`http://localhost:5000/tools/${id}`).then(res => res.json()))
+            fetch(`https://obscure-atoll-49533.herokuapp.com/tools/${id}`).then(res => res.json()))
     if (isLoading) {
         return <p> Loading ....!</p>
     }
 
     // const [purchaseTool, setPurchaseTool] = useState([]);
     // useEffect(() => {
-    //     const url = `http://localhost:5000/tools/${id}`;
+    //     const url = `https://obscure-atoll-49533.herokuapp.com/tools/${id}`;
     //     fetch(url)
     //         .then(res => res.json())
     //         .then(data => {

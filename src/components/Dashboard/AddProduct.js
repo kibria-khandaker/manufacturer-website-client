@@ -11,7 +11,7 @@ const AddProduct = () => {
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    // const { data: services, isLoading, refetch } = useQuery('productTools', () => fetch(`http://localhost:5000/service`)
+    // const { data: services, isLoading, refetch } = useQuery('productTools', () => fetch(`https://obscure-atoll-49533.herokuapp.com/service`)
     //     .then(res => res.json())
     // )
     // if (isLoading) {
@@ -49,7 +49,7 @@ const AddProduct = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('http://localhost:5000/tools', {
+                    fetch('https://obscure-atoll-49533.herokuapp.com/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
