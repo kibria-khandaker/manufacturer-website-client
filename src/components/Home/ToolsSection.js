@@ -18,7 +18,7 @@ const ToolsSection = () => {
                 {
                     tools.map(tool => (
                         <div key={tool._id} className="card lg:card-side bg-base-100 shadow border">
-                            <figure><img src={tool.img} alt="Album" /></figure>
+                            <figure className='lg:w-48  p-3 mx-auto' ><img src={tool.img} alt="Album" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title"> {tool.name} </h2>
                                 <p className=' text-xs'> Minimum Order: {tool.minimumOrder} </p>
@@ -36,7 +36,7 @@ const ToolsSection = () => {
                                 </div>
                             </div>
                         </div>
-                    )).slice(0, 6)
+                    )).reverse().slice(0, 6)
                 }
 
             </div>

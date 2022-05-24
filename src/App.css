@@ -3,4 +3,25 @@
 .btnBgClr{background-color: #fd4475; border: none;}
 .borderClr{color: #fd4475;}
 
-/* .active{color: #fd4475;} */
+/*  active */
+a.active {
+    background-color: #fd4475 !important;
+}
+/* a.active :active{
+    background-color: #fd4475 !important;
+}
+a.active:focus {
+    background-color: #fd4475 !important;
+}
+a.active:focus-within {
+    background-color: #fd4475 !important;
+}
+a.active:focus-visible {
+    background-color: #fd4475 !important;
+}
+a.active:target {
+    background-color: #fd4475 !important;
+}
+a.active:visited {
+    background-color: #fd4475 !important;
+} */

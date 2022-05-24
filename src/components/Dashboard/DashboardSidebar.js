@@ -24,6 +24,7 @@ const DashboardSidebar = ({ children }) => {
                     {/* <!-- Sidebar content here -->  */}
                     <li className='mt-3' ><NavLink to='/dashboard ' > My Orders </NavLink></li>
                     <li className='mt-3' ><NavLink to='/dashboard/MyProfile' > My Profile </NavLink></li>
+                    {/* <li className='mt-3' ><NavLink to='/dashboard/updateProfile' > Update Profile </NavLink></li> */}
                     <li className='mt-3' ><NavLink to='/dashboard/AddReview' > Add A Review </NavLink></li>
                 
                     {admin && <>

@@ -16,6 +16,8 @@ import AddReview from './components/Dashboard/AddReview';
 import Dashboard from './components/Dashboard/Dashboard';
 import MyOrders from './components/Dashboard/MyOrders';
 import MyProfile from './components/Dashboard/MyProfile';
+import MyProfilePortfolio from './components/Dashboard/MyProfilePortfolio';
+import MyProfileUpdate from './components/Dashboard/MyProfileUpdate';
 import Users from './components/Dashboard/Users';
 import Home from './components/Home/Home';
 
@@ -29,24 +31,18 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
+          <Route path="/MyPortfolio" element={<MyProfilePortfolio />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
 
-
-
-          {/* <Route path="/blogs" element={<Blogs />} /> */}
-
-          <Route path="/blogs" element={
-            <RequireAuth>
-              <Blogs />
-            </RequireAuth>
-          } />
 
           <Route path="/purchase/:id" element={
             <RequireAuth>
               <ToolPurchase />
             </RequireAuth>
           } />
+
 
           {/* Dash board Route start */}
           <Route path='/dashboard' element={
@@ -55,11 +51,14 @@ function App() {
               </RequireAuth>}>
                 <Route index element={<MyOrders />} />
                 <Route path="MyProfile" element={<MyProfile />} />
+                <Route path="updateProfile" element={<MyProfileUpdate />} />
                 <Route path="AddReview" element={<AddReview />} />
                 <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>} />
                 <Route path="AddProduct" element={<RequireAdmin><AddProduct /></RequireAdmin>} />
           </Route>
           {/* Dash board Route end */}
+
+          
 
         </Routes>
         <Footer></Footer>

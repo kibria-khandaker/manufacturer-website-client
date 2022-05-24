@@ -11,12 +11,13 @@ const AddProduct = () => {
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    // const { data: services, isLoading, refetch } = useQuery('productTools', () => fetch(`https://obscure-atoll-49533.herokuapp.com/service`)
+    // const { data: services, isLoading, refetch } = useQuery('productTools', () => fetch(`http://localhost:5000/service`)
     //     .then(res => res.json())
     // )
     // if (isLoading) {
     //     return <LoadingSpinner></LoadingSpinner>
     // }
+
 
     const imageStorageKey = 'c8407660ebe0da4fb4e33a9b4d5607e8';
 
@@ -49,7 +50,7 @@ const AddProduct = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('https://obscure-atoll-49533.herokuapp.com/tools', {
+                    fetch('http://localhost:5000/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -60,12 +61,11 @@ const AddProduct = () => {
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
-                                toast.success('Doctor Added Successfully')
+                                toast.success('Product Added Successfully')
                                 reset();
                             } else {
-                                toast.error('Doctor Added Failed')
+                                toast.error('Product Added Failed')
                             }
-                            // console.log('Doctor inserted', inserted);
                         })
 
                 }
@@ -97,9 +97,9 @@ const AddProduct = () => {
                 <input className='w-full p-3 rounded-md' placeholder='Product Name' {...register("name", { required: true })} />
 
                 <div className='flex gap-2 justify-between'>
-                    <input className=' p-3 rounded-md' placeholder='Product Price' type="number" min="1" step="1" {...register("price", { required: true })} />
-                    <input className=' p-3 rounded-md' placeholder='Available Product' type="number" min="1" step="1" {...register("quantity", { required: true })} />
-                    <input className=' p-3 rounded-md' placeholder='Minimum Order Required' type="number" min="1" step="1" {...register("minimumOrder", { required: true })} />
+                    <input className='w-2/6 p-3 rounded-md' placeholder='Product Price' type="number" min="1" step="1" {...register("price", { required: true })} />
+                    <input className='w-2/6 p-3 rounded-md' placeholder='Available Product' type="number" min="1" step="1" {...register("quantity", { required: true })} />
+                    <input className='w-2/6 p-3 rounded-md' placeholder='Minimum Order Required' type="number" min="1" step="1" {...register("minimumOrder", { required: true })} />
                 </div>
 
                 {/* Image filed here */}

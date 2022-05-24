@@ -2,7 +2,7 @@ import { useQuery } from 'react-query';
 
 const useSingleTools = (id) => {
     const { data: singleTool, isLoading, refetch } = useQuery('repoData', () =>
-        fetch(`https://obscure-atoll-49533.herokuapp.com/tools/${id}`).then(res =>
+        fetch(`http://localhost:5000/tools/${id}`).then(res =>
             res.json()
         )
     )
