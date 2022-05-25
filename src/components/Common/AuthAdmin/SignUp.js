@@ -30,7 +30,7 @@ const SignUp = () => {
 
     useEffect(() => {
         if (token) {
-            navigate('/about')
+            navigate('/')
         }
 
     }, [token,navigate])
@@ -51,8 +51,6 @@ const SignUp = () => {
         // console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
-        // console.log('updateProfile done');
-        // navigate('/')
     }
 
     return (

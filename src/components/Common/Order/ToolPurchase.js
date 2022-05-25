@@ -40,7 +40,6 @@ const ToolPurchase = () => {
                 <figure><img src={purchaseTool.img} alt="purchaseImg" /></figure>
             </div>
             <Order
-                // refetch={refetch}
                 purchaseTool={purchaseTool}
             ></Order>
         </div>

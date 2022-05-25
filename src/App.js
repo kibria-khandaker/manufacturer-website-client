@@ -17,6 +17,7 @@ import ManageProducts from './components/Dashboard/ManageProducts';
 import MyOrders from './components/Dashboard/MyOrders';
 import MyProfile from './components/Dashboard/MyProfile';
 import MyProfilePortfolio from './components/Dashboard/MyProfilePortfolio';
+import Payment from './components/Dashboard/Payment';
 import Users from './components/Dashboard/Users';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound';
@@ -53,6 +54,8 @@ function App() {
                 <Route index element={<MyProfile />} />
                 <Route path="UserOrder" element={<MyOrders />} />
                 <Route path="AddReview" element={<AddReview />} />
+                <Route path="Payment/:id" element={<Payment />} />
+
                 <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>} />
                 <Route path="AddProduct" element={<RequireAdmin><AddProduct /></RequireAdmin>} />
                 

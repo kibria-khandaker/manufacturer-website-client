@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 const Order = ({ purchaseTool }) => {
     // const { _id, name, email, category, supplier, price, quantity, minimumOrder, quality, img, shortDesc } = purchaseTool;
-
+    const navigate = useNavigate();
     const [user, loading, error] = useAuthState(auth);
     const [quantityCount, setQuantityCount] = useState(purchaseTool.minimumOrder)
     // xxxxxxxxxxxxxxxx 
@@ -42,9 +42,15 @@ const Order = ({ purchaseTool }) => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                   // toast(`Your Booking Prospering,`);
+                    alert(' Thanks for booking the product, Hop Will Order again ')
+                    navigate('/home')
+                    // window.location.reload()
+                   // toast(`Your Booking Prospering,`); // suddenly toast not working so uninstalled it
                 } else {
+                    alert('May be You Already Ordered the product , try with new once ')
                    // toast.error(`Your Already Have booking`);
+                   navigate('/home')
+
                 }
             })
     }
@@ -101,7 +107,7 @@ const Order = ({ purchaseTool }) => {
                 <input type="submit" value="Complete Order" className="btn btnBgClr text-white w-full" />
             </form>
 
-            <Link className=' bgClr text-white rounded-lg px-3 py-2 mt-24 inline-block mx-auto text-center' to='/'> Again Order Another Tools </Link>
+            <Link className=' bgClr text-white rounded-lg px-3 py-2 mt-24 inline-block mx-auto text-center' to='/'> Back to Order for another Tools </Link>
             {/* xxxxxxxxxxxxxxxx  */}
         </div>
     );

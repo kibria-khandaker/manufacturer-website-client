@@ -1,10 +1,12 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const AddReview = () => {
     const [user] = useAuthState(auth)
+    const navigate = useNavigate();
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
@@ -44,11 +46,16 @@ const AddReview = () => {
                     })
                         .then(res => res.json())
                         .then(inserted => {
-                            if (inserted.insertedId) {
-                              //  toast.success('review Added Successfully')
+                            if (inserted?.insertedId) {
+                                alert(' Thanks for your Review ')
+                                navigate('/Reviews')
+                                //  toast.success('review Added Successfully')
                                 reset();
                             } else {
-                              //  toast.error('review Added Failed')
+                                //  toast.error('review Added Failed')
+                                alert('May be You Already Did, check your Review ')
+                                // toast.error(`Your Already Have booking`);
+                                navigate('/Reviews')
                             }
                         })
 
@@ -69,10 +76,10 @@ const AddReview = () => {
                 {
                     user?.displayName && <input defaultValue={user?.displayName} className='w-full p-3 rounded-md' readOnly placeholder='Name' type="text"  {...register("name")} />
                 }
-                
+
                 <input className='w-full p-3 rounded-md' placeholder='From Where Or Institute ' {...register("institute", { required: true })} />
                 <input className='w-full p-3 rounded-md' placeholder='Current Position' {...register("position", { required: true })} />
-             
+
                 <select className='w-full p-3 rounded-md' defaultValue={'0.5'}  {...register("rating", { required: true })}>
                     <option value="0.5" disabled hidden> Product Type </option>
                     <option value="5"> 5 </option>
@@ -86,7 +93,7 @@ const AddReview = () => {
                     <option value="1"> 1 </option>
                     <option value="0.5"> 0.5 </option>
                 </select>
-   
+
                 {/* Image filed here */}
                 <input className="input py-2 w-full" type="file" {...register("image", { required: true })} />
 

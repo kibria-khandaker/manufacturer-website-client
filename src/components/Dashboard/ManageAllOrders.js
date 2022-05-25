@@ -1,11 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useQuery } from 'react-query';
+import LoadingSpinner from './../Common/AuthAdmin/LoadingSpinner';
+import ManageOrdersRow from './ManageOrdersRow';
+import OrdersDeleteModal from './OrdersDeleteModal';
+
 
 const ManageAllOrders = () => {
+    const [deleteOrders , setDeleteOrders] = useState(null)
+    const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () =>
+        fetch('http://localhost:5000/booking/manage', {
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        }).then(res => res.json()))
+
+    if (isLoading) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
+
     return (
         <div>
-            <h2> Manage All Orders </h2>
+            <h2 className='font-bold pb-5 pl-1'> Here Total Orders : {manageOrders?.length} </h2>
+            {/* table  */}
+            <div className="overflow-x-auto">
+                <table className="table w-full">
+
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th> Order's Product </th>
+                            <th> Order By </th>
+                            <th> Order owner Address </th>
+                            <th className='text-center'> Quantity </th>
+                            <th> Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            manageOrders.map((Order, index) => (
+                                <ManageOrdersRow
+                                    key={Order._id}
+                                    Order={Order}
+                                    index={index}
+                                    refetch={refetch}
+                                    setDeleteOrders={setDeleteOrders}
+                                ></ManageOrdersRow>
+                            ))
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            {
+                deleteOrders && <OrdersDeleteModal
+                deleteOrders={deleteOrders}
+                refetch={refetch}
+                setDeleteOrders={setDeleteOrders}
+                ></OrdersDeleteModal>
+
+            }
         </div>
     );
 };
+
 
 export default ManageAllOrders;

@@ -55,9 +55,12 @@ const MyProfile = () => {
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
+                                alert('Thanks For Update Your Profile ')
                                 reset();
+                                // window.location.reload()
                               //  toast.success('profile Update Successfully')
                             } else {
+                                alert('You Already Updated ')
                               //  toast.error('Profile Update Failed')
                             }
                             reset();

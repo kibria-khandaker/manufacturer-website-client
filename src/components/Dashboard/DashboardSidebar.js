@@ -20,7 +20,7 @@ const DashboardSidebar = ({ children }) => {
 
             <div className="drawer-side">
                 <label htmlFor="dashboard-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 pt-20 overflow-y-auto w-80 bg-base-100 text-base-content">
+                <ul className="menu p-4 pt-32 overflow-y-auto w-80 bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here -->  */}
                     {/* <li className='mt-3' ><NavLink to='/dashboard/MyProfile' > My Profile </NavLink></li> */}
                     <li className='mt-3' ><NavLink to='/dashboard ' >  My Profile </NavLink></li>
