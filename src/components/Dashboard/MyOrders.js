@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import MyOrdersDelete from './MyOrdersDelete';
 
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
+    const [openDeleteModal, setOpenDeleteModal] = useState(null);
     const [bookingTools, setBookingTools] = useState([]);
 
     const navigate = useNavigate()
@@ -32,7 +34,7 @@ const MyOrders = () => {
                     setBookingTools(data)
                 })
         }
-    }, [user, navigate])
+    }, [user, navigate, openDeleteModal])
 
     return (
         <div>
@@ -44,7 +46,7 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th> Tools / Product Name </th>
+                            <th> Tools / Product Name</th>
                             <th> Order Quantity </th>
                             <th> Pay For Order </th>
                             <th> Payment Status </th>
@@ -59,11 +61,16 @@ const MyOrders = () => {
                                     <td>{tool.bookQuantity}</td>
                                     <td>{tool.bookPrice}</td>
                                     <td>
-                                        { (tool.bookPrice && !tool.paid) && <Link to={`/dashboard/payment/${tool._id}`}><button class="btn btnBgClr btn-xs">Pay</button></Link> }
-                                        { (tool.bookPrice && tool.paid) && <div>
-                                            <p><span class=" text-green-500">Paid</span></p>
-                                            <p> Transaction ID:( <span class=" text-green-500">{tool.transactionId}</span> )</p>
-                                        </div> }
+                                        {
+                                            (tool.bookPrice && !tool.paid) && <div>
+                                                <Link to={`/dashboard/payment/${tool._id}`}><button className="btn bg-orange-500 border-0 rounded btn-xs">Pay</button></Link>
+                                                <label onClick={() => setOpenDeleteModal(tool)} for="myOrder_delete" className="btn btnBgClr btn-xs border-0 rounded mx-2"> Cancel </label>
+                                            </div>
+                                        }
+                                        {(tool.bookPrice && tool.paid) && <div>
+                                            <p><span className=" text-green-500">Paid</span></p>
+                                            <p> Transaction ID:( <span className=" text-green-500">{tool.transactionId}</span> )</p>
+                                        </div>}
                                     </td>
                                 </tr>
                             ))
@@ -72,6 +79,16 @@ const MyOrders = () => {
                     </tbody>
                 </table>
             </div>
+            {/* ---------------------------------------------  */}
+
+            {
+                openDeleteModal && <MyOrdersDelete
+                    openDeleteModal={openDeleteModal}
+                    setOpenDeleteModal={setOpenDeleteModal}
+                ></MyOrdersDelete>
+            }
+
+            {/* ---------------------------------------------  */}
         </div>
     );
 };

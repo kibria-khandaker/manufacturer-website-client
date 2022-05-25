@@ -57,7 +57,6 @@ const ManageProducts = () => {
                 refetch={refetch}
                 setDeleteTools={setDeleteTools}
                 ></ProductsDeleteModal>
-
             }
         </div>
     );

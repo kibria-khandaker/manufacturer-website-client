@@ -70,7 +70,7 @@ const Order = ({ purchaseTool }) => {
     // xxxxxxxxxxxxxxxx 
     // xxxxxxxxxxxxxxxx 
     return (
-        <div className='w-6/6 lg:w-3/5 '>
+        <div className='w-full '>
             <h2 className='text-center font-bold text-lg textClr py-10' > Complete your Booking </h2>
 
 

@@ -17,7 +17,7 @@ const ClientsReviews = () => {
     return (
         <div className=' pb-40 pt-32  bg-[#fd4475] bg-opacity-5 '>
             <h2 className='text-[#fd4475] text-center text-4xl font-bold mb-14 '> Clients Reviews </h2>
-            <div className='w-8/12 grid  md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto'>
+            <div className='w-8/12 grid  md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto'>
                 {
                     customerReviews.map(customerReview => <div key={customerReview._id} className="rating p-3 flex-col justify-center text-center items-center">
                         <div className="avatar">
@@ -43,12 +43,12 @@ const ClientsReviews = () => {
                             <p className='text-xs py-2'> {customerReview.shortDesc} </p>
                             <hr className='border-red-600' />
                         </div>
-                    </div>).slice(0, 4)
+                    </div>).reverse().slice(0, 6)
                 }
 
             </div>
             <p className='text-center block pt-10'>
-                <button  onClick={() => navigate(`/Reviews`)} className="btn btn-outline capitalize textClr btn-sm"> Check Our All review  {customerReviews.length}  </button>
+                <button  onClick={() => navigate(`/Reviews`)} className="btn btn-outline capitalize textClr btn-sm"> Check Our All  {customerReviews.length} review  </button>
             </p>
         </div>
 
