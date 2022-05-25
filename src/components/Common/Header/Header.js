@@ -51,8 +51,7 @@ const Header = ({ children }) => {
                             <li><NavLink to='/home' className='rounded-lg'> Home </NavLink></li>
 
                             {user && <li><NavLink to='/dashboard' className='rounded-lg'> Dashboard </NavLink></li>}
-
-                            <li><NavLink to='/about' className='rounded-lg'> About </NavLink></li>
+                            
                             <li><NavLink to='/MyPortfolio' className='rounded-lg'> My Portfolio </NavLink></li>
                             <li><NavLink to='/blogs' className='rounded-lg'> Blogs </NavLink></li>
                             {

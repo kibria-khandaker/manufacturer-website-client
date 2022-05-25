@@ -10,7 +10,7 @@ const Blogs = () => {
                 Optimize is very important So try Maximum Optimize React-rendering, and also try to avoid over-rendering unnecessary features. need to make confirm that react components receive only necessary props.. .Avoid inline functions as much as possible.  Immutability is the key to avoid unnecessary re-renders. Always render hidden components like a modal and Dropdown conditionally. Always call multiple APIs parallelly.
             </p>
 
-            <div class="divider"></div>
+            <div className="divider"></div>
 
             <h2> 2 What are the different ways to manage a state in a React application? </h2>
             <p> <span> Answer: </span> <br />
@@ -21,14 +21,14 @@ const Blogs = () => {
                 <br/> 4) URL state.
             </p>
 
-            <div class="divider"></div>
+            <div className="divider"></div>
 
             <h2> 3 How does prototypical inheritance work? </h2>
             <p> <span> Answer: </span> <br />
                 xxxxxxxxxxxx
             </p>
 
-            <div class="divider"></div>
+            <div className="divider"></div>
 
             <h2> 4 How does prototypical inheritance work? </h2>
             <p> <span> Answer: </span> <br />

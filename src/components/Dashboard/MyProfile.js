@@ -7,7 +7,7 @@ import MyProfileDetails from './MyProfileDetails';
 
 const MyProfile = () => {
     const [user, loading, error] = useAuthState(auth);
-    console.log(user);
+    // console.log(user);
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
@@ -56,25 +56,22 @@ const MyProfile = () => {
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
-                                toast.success('profile Update Successfully')
                                 reset();
+                                toast.success('profile Update Successfully')
                             } else {
                                 toast.error('Profile Update Failed')
                             }
+                            reset();
                         })
 
                 }
             })
-
-
-
-        console.log('Add Product data', data);
+            
     }
 
     return (
-        <div>
-            <h2> My Profile </h2>
-            <p> My Profile: 762 </p>
+        <div className=' md:w-3/5 lg:w-2/5 mx-auto'>
+            <h2 className='text-center font-bold'> My Profile </h2>
             {/* ---------------  */}
             <div className="hero">
                 <div className="hero-content flex-col ">
@@ -140,7 +137,7 @@ const MyProfile = () => {
 
                             <textarea className='w-full p-3 rounded-md border' placeholder='About Yourself' {...register("shortDesc", { required: true })} />
 
-                            <input className='w-full p-3 rounded-md btnBgClr text-white mt-5 font-bold text-xl' type="submit" value='Submit' />
+                            <input className=' cursor-pointer w-full p-3 rounded-md btnBgClr text-white mt-5 font-bold text-xl' type="submit" value='Submit' />
                         </form>
                         {/* --------------------------- */}
 

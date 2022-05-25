@@ -8,7 +8,7 @@ const MyProfilePortfolio = () => {
     const [user, loading, error] = useAuthState(auth);
 
     return (
-        <div className=' py-44 bg-slate-300 px-5 text-center'>
+        <div className=' py-36 bg-[#fd4475] bg-opacity-10 px-5 text-center'>
 
 
 
@@ -43,14 +43,14 @@ const MyProfilePortfolio = () => {
                         <div>
                             <p className='pl-5 pt-2'> 1) <a className='textClr uppercase' href="https://fruits-stock-house.web.app/"> fruits-stock-house </a>  </p>
                             <a href="https://fruits-stock-house.web.app/">
-                                <img className="rounded-xl md:w-2/4 mx-auto" src="https://i.ibb.co/b3QwLNZ/smart-cleaner-12.jpg" alt="Shoes" />
+                                <img className="rounded-xl md:w-2/4 mx-auto" src="https://i.ibb.co/T1WYh6Y/fruits-house-12.jpg" alt="Shoes" />
                             </a>
                         </div>
 
                         <div>
                             <p className='pl-5 pt-2'> 2) <a className='textClr uppercase' href="https://a-smart-cleaner.web.app/"> SMART CLEANER  </a> </p>
                             <a href="https://a-smart-cleaner.web.app/">
-                                <img className="rounded-xl md:w-2/4 mx-auto" src="https://i.ibb.co/T1WYh6Y/fruits-house-12.jpg" alt="Shoes" />
+                                <img className="rounded-xl md:w-2/4 mx-auto" src="https://i.ibb.co/b3QwLNZ/smart-cleaner-12.jpg" alt="Shoes" />
                             </a>
                         </div>
 

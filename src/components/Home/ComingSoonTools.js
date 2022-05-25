@@ -6,11 +6,10 @@ const ComingSoonTools = () => {
     return (
         <div className="hero py-36 px-20">
             <div className="hero-content flex-col lg:flex-row">
-                <img src={tools1} className=" w-4/5 lg:w-2/5 rounded-lg shadow-2xl" alt='ComingSoon' />
+                <img src='https://i.ibb.co/9wR8NzQ/coming.jpg' className=" w-4/5 lg:w-2/5 rounded-lg shadow-2xl" alt='ComingSoon' />
                 <div className=' lg:w-3/5 px-10 py-10'>
                     <h2 className='text-[#fd4475]  text-4xl font-bold'> Coming Soon..!  </h2>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <p className="py-6"> <b>NorthStar Jumping Jack Tamping Rammer — With 4 HP Honda Engine</b> This NorthStar® gas-powered tamping rammer is ideal for compacting cohesive soil in confined areas. Powered by a 4 HP Honda 4-cycle gasoline engine, it features a convenient oil checking system and dual filter system. Rammer is lightweight and well balanced for easy handling and operation. Suitable for trenches, pipelines and patching. </p>
                 </div>
             </div>
         </div>

@@ -61,27 +61,24 @@ const AddProduct = () => {
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
-                                toast.success('Product Added Successfully')
+                                // toast.success('Product Successfully add')
+                                alert('Product Successfully added')
                                 reset();
                             } else {
-                                toast.error('Product Added Failed')
+                                // toast.error('Product add to Failed')
+                                alert('Product Failed to add')
                             }
                         })
-
                 }
-                console.log('Image imgbb', result)
             })
-
-
-
-        console.log('Add Product data', data);
+        // console.log('Add Product data', data);
     }
 
     return (
         <div>
             <h2 className=' text-center   text-xl my-5'> Add Available Construction Tools </h2>
             {/* --------------------------- */}
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-2 w-3/5 mx-auto'>
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-2 md:w-4/5 lg:w-3/5 mx-auto'>
                 {
                     user?.email && <input defaultValue={user?.email} className='w-full p-3 rounded-md' readOnly placeholder='Admin Email' type="email"  {...register("email")} />
                 }
@@ -107,7 +104,7 @@ const AddProduct = () => {
 
                 <textarea className='w-full p-3 rounded-md' placeholder='Product Description' {...register("shortDesc", { required: true })} />
 
-                <input className='w-full p-3 rounded-md btnBgClr text-white mt-5 font-bold text-xl' type="submit" value='Add' />
+                <input className=' cursor-pointer w-full p-3 rounded-md btnBgClr text-white mt-5 font-bold text-xl' type="submit" value='Add' />
             </form>
             {/* --------------------------- */}
 

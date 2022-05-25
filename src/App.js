@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
-import About from './components/About';
 import Blogs from './components/Blogs/Blogs';
 import Login from './components/Common/AuthAdmin/Login';
 import RequireAdmin from './components/Common/AuthAdmin/RequireAdmin';
@@ -13,11 +13,15 @@ import ToolPurchase from './components/Common/Order/ToolPurchase';
 import AddProduct from './components/Dashboard/AddProduct';
 import AddReview from './components/Dashboard/AddReview';
 import Dashboard from './components/Dashboard/Dashboard';
+import ManageAllOrders from './components/Dashboard/ManageAllOrders';
+import ManageProducts from './components/Dashboard/ManageProducts';
 import MyOrders from './components/Dashboard/MyOrders';
 import MyProfile from './components/Dashboard/MyProfile';
 import MyProfilePortfolio from './components/Dashboard/MyProfilePortfolio';
 import Users from './components/Dashboard/Users';
 import Home from './components/Home/Home';
+import NotFound from './components/NotFound';
+import Reviews from './components/Reviews';
 
 function App() {
   return (
@@ -28,10 +32,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<About />} />
           <Route path="/MyPortfolio" element={<MyProfilePortfolio />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/Reviews" element={<Reviews />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
 
 
@@ -52,12 +56,17 @@ function App() {
                 <Route path="AddReview" element={<AddReview />} />
                 <Route path="users" element={<RequireAdmin><Users /></RequireAdmin>} />
                 <Route path="AddProduct" element={<RequireAdmin><AddProduct /></RequireAdmin>} />
+                
+                <Route path="ManageAllOrders" element={<RequireAdmin><ManageAllOrders /></RequireAdmin>} />
+                <Route path="ManageProducts" element={<RequireAdmin><ManageProducts /></RequireAdmin>} />
           </Route>
           {/* Dash board Route end */}
 
           
-
+          <Route path="*" element={<NotFound />} />
         </Routes>
+
+        <ToastContainer></ToastContainer>
         <Footer></Footer>
       </Header>
 

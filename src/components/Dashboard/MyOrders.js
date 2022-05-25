@@ -20,7 +20,7 @@ const MyOrders = () => {
                 }
             })
                 .then(res => {
-                    console.log('ressss', res);
+                    // console.log('ressss', res);
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
                         localStorage.removeItem('accessToken');
