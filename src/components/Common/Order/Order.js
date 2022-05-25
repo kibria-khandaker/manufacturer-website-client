@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
-import auth from '../../../firebase.init';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Order = ({ purchaseTool }) => {
     // const { _id, name, email, category, supplier, price, quantity, minimumOrder, quality, img, shortDesc } = purchaseTool;
@@ -43,9 +42,9 @@ const Order = ({ purchaseTool }) => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    toast(`Your Booking Prospering,`);
+                   // toast(`Your Booking Prospering,`);
                 } else {
-                    toast.error(`Your Already Have booking`);
+                   // toast.error(`Your Already Have booking`);
                 }
             })
     }

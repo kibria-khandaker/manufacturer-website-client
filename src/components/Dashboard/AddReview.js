@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddReview = () => {
@@ -46,10 +45,10 @@ const AddReview = () => {
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
-                                toast.success('review Added Successfully')
+                              //  toast.success('review Added Successfully')
                                 reset();
                             } else {
-                                toast.error('review Added Failed')
+                              //  toast.error('review Added Failed')
                             }
                         })
 

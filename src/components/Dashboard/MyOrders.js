@@ -32,7 +32,7 @@ const MyOrders = () => {
                     setBookingTools(data)
                 })
         }
-    }, [user,navigate])
+    }, [user, navigate])
 
     return (
         <div>
@@ -62,7 +62,6 @@ const MyOrders = () => {
                                 </tr>
                             ))
                         }
-
 
                     </tbody>
                 </table>

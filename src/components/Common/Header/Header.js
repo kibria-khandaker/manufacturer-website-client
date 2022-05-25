@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import useAdmin from '../../../hooks/useAdmin';
-import logoImg from '../../../img/logo192.png'
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
-import { ToastContainer } from 'react-toastify';
+import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { NavLink, useLocation } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import useAdmin from '../../../hooks/useAdmin';
+import logoImg from '../../../img/logo192.png';
 
 const Header = ({ children }) => {
     const [user, loading, error] = useAuthState(auth);
@@ -112,7 +111,7 @@ const Header = ({ children }) => {
 
                 </ul>
             </div>
-            <ToastContainer />
+
         </div>
     );
 };

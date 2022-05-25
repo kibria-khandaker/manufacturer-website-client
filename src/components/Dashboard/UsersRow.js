@@ -1,5 +1,4 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
 const UsersRow = ({ user,index, refetch }) => {
     const { email, role } = user;

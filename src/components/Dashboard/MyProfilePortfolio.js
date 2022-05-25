@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
-import LoadingSpinner from '../Common/AuthAdmin/LoadingSpinner';
 
 const MyProfilePortfolio = () => {
     const [user, loading, error] = useAuthState(auth);

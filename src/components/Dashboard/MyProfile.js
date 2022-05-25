@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import MyProfileDetails from './MyProfileDetails';
 
@@ -57,9 +56,9 @@ const MyProfile = () => {
                         .then(inserted => {
                             if (inserted.insertedId) {
                                 reset();
-                                toast.success('profile Update Successfully')
+                              //  toast.success('profile Update Successfully')
                             } else {
-                                toast.error('Profile Update Failed')
+                              //  toast.error('Profile Update Failed')
                             }
                             reset();
                         })

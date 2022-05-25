@@ -1,107 +1,142 @@
 [
-    {
-      "_id": "1",
-      "name": "Measuring Tape1",
-      "email":"kibriakhandaker66@gmail.com",
-      "category": "measurement1",
-      "supplier": "kibria",
-      "price": 70,
-      "quantity": 980,
-      "minimumOrder": 25,
-      "quality": "Plastic1",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today"
-    },
-    {
-      "_id": "2",
-      "name": "Measuring Tape2",
-      "email":"kibriakhandaker@gmail.com",
-      "category": "measurement1",
-      "supplier": "kibria1",
-      "price": 55,
-      "quantity": 190,
-      "minimumOrder": 5,
-      "quality": "Plastic2",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes, used for making wine, jam, grape juice, jelly, grape seed extract, vinegar, and grape seed oil, or dried as raisins, currants and sultanas"
-    },
-    {
-      "_id": "3",
-      "name": "Measuring Tape3",
-      "email":"kibriakhandaker66@gmail.com",
-      "category": "measurement2",
-      "supplier": "kibria2",
-      "price": 60,
-      "quantity": 910,
-      "minimumOrder": 20,
-      "quality": "Plastic3",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "An orange is a fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus x sinensis, which is also called sweet orange, to distinguish it from the related Citrus x aurantium, referred to as bitter orange"
-    },
-    {
-      "_id": "4",
-      "name": "Measuring Tape4",
-      "email":"kibriakhandaker66@gmail.com",
-      "category": "measurement3",
-      "supplier": "kibria3",
-      "price": 70,
-      "quantity": 910,
-      "minimumOrder": 30,
-      "quality": "Plastic1",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "Cherries are low in calories and chock full of fiber, vitamins, minerals, nutrients, and other good-for-you ingredients. You will get vitamins C, A, and K. Each long-stemmed fruit delivers potassium, magnesium, and calcium too. They also bring antioxidants, like beta-carotene, and the essential nutrient choline"
-    },
-    {
-      "_id": "5",
-      "name": "Measuring Tape5",
-      "email":"kibriakhandaker@gmail.com",
-      "category": "measurement2",
-      "supplier": "kibria2",
-      "price": 55,
-      "quantity": 610,
-      "minimumOrder": 45,
-      "quality": "Plastic2",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "A nut is a fruit consisting of a hard or tough nutshell protecting a kernel which is usually edible. In general usage and in a culinary sense, a wide variety of dry seeds are called nuts, but in a botanical context (nut) implies that the shell does not open to release the seed"
-    },
-    {
-      "_id": "6",
-      "name": "Measuring Tape6",
-      "email":"kibriakhandaker@gmail.com",
-      "category": "measurement1",
-      "supplier": "kibria1",
-      "price": 90,
-      "quantity": 140,
-      "minimumOrder": 30,
-      "quality": "Plastic3",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "Mangos are also rich in vitamin C, which is important for forming blood vessels and healthy collagen, as well as helping you heal. Mangos are rich in beta-carotene, a pigment responsible for the yellow-orange color of the fruit. Beta-carotene is an antioxidant, just one of many found in mangos"
-    },
-    {
-      "_id": "7",
-      "name": "Measuring Tape7",
-      "email":"kibriakhandaker66@gmail.com",
-      "category": "measurement3",
-      "supplier": "kibria3",
-      "price": 10,
-      "quantity": 215,
-      "minimumOrder": 12,
-      "quality": "Plastic2",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "Coconuts are distinct from other fruits because their endosperm contains a large quantity of clear liquid, called coconut water or coconut juice. Mature, ripe coconuts can be used as edible seeds, or processed for oil and plant milk from the flesh, charcoal from the hard shell, and coir from the fibrous husk."
-    },
-    {
-      "_id": "8",
-      "name": "Measuring Tape8",
-      "email":"kibriakhandaker@gmail.com",
-      "category": "measurement2",
-      "supplier": "kibria2",
-      "price": 60,
-      "quantity": 320,
-      "minimumOrder": 15,
-      "quality": "Plastic1",
-      "img": "https://dreamcivil.com/wp-content/uploads/2021/08/412izG3BRwL._AC_.jpg",
-      "shortDesc": "Pineapples are delicious, versatile, and loaded with nutrients and antioxidants. Their nutrients and compounds have been linked to impressive health benefits, including improved digestion, a lower risk of cancer, and osteoarthritis relief. Nonetheless, more human studies are needed"
-    }
-  ]
-  
+  {
+    "name": "aaaaaaa",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "plastic",
+    "price": 10,
+    "quantity": 20,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/fNXyNVk/Tape-Measure-Twin-Pack.jpg",
+    "shortDesc": "This Titan twin pack of 1in. x 25ft. tape measures features tough, impact-resistant plastic cases, ergonomic cushion grips for maximum user comfort and handsfree blade locks."
+  },
+  {
+    "name": "bbbbbbbbb",
+    "email": "kibriakhandaker@gmail.com",
+    "category": "machineries",
+    "price": 12,
+    "quantity": 10,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/M6mXm6d/tool1.jpg",
+    "shortDesc": "Beautiful design automatic tool belt building construction tools and equipment kw 0041 rebar tying machine.one year warranty for the machine with CE certificate. One set package includes: one machine two pcs batteries one charger one user manual one pliers four rolls of wire coils one plastic box one gift box"
+  },
+  {
+    "name": "ccccccccccc",
+    "email": "phero@phero.com",
+    "category": "machineries",
+    "price": 22,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/cDH1Y7W/H81d25903390745baa71eec6ab6ed466cf.jpg",
+    "shortDesc": "Allman Factory Supply 2 ton 380V 440V Heavy Duty Building Construction 220V Electric Winch"
+  },
+  {
+    "name": "ddddddddd",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 15,
+    "quantity": 16,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/4gQB9wH/HTB1u-Den-XPLu-K1-Rjy0-Fhq6xpd-FXag.jpg",
+    "shortDesc": "Briggs & Stratton Vanguard gasoline engine, 23hp  · Italian Hydrocontrol valve · Italian joystick HANSA pump optional     · American WHITE motor · Ergonomically designed, operating safety     · Quick hitch system· Balance weight platform optional · Higher lifting height than similar products · Stand on or walk behind     · Double hand grip · Tracked and wheeled type optional"
+  },
+  {
+    "name": "eeeeee",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "ffffffff",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "plastic",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/vcM9sdt/Gloves.webp",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "gggggggggg",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "hhhhhhhh",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "iiiiiiii",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "jjjjjjjjjjjjj",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "kkkkkkkkkkkkkkkkkkkkkkkk",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "LLLLLLLLL",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "mmmmmmmmmmm",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  },
+  {
+    "name": "NNNNNNNNNNNNNNN",
+    "email": "kibriakhandaker66@gmail.com",
+    "category": "machineries",
+    "price": 25,
+    "quantity": 14,
+    "minimumOrder": 3,
+    "img": "https://i.ibb.co/Wkhsqvk/Hc16e5f08e34e45d1b8fc1824151ecc2c-Y.jpg",
+    "shortDesc": "This product absorbs advanced technology at home and abroad, is novel in design, simple in operation and convenient to dismantle and repair. Its safety design and configuration is fully in conformity with national standards. It is mainly suitable for bridge, chimney, building and other high-rise building builders and cargo transportation, and can also be used in warehouses, wharfs and other places where vertical transportation needs to be used."
+  }
+]

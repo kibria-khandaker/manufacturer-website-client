@@ -1,23 +1,12 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useQuery } from 'react-query';
-import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import LoadingSpinner from '../Common/AuthAdmin/LoadingSpinner';
 
 const AddProduct = () => {
     const [user] = useAuthState(auth)
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-
-    // const { data: services, isLoading, refetch } = useQuery('productTools', () => fetch(`http://localhost:5000/service`)
-    //     .then(res => res.json())
-    // )
-    // if (isLoading) {
-    //     return <LoadingSpinner></LoadingSpinner>
-    // }
-
 
     const imageStorageKey = 'c8407660ebe0da4fb4e33a9b4d5607e8';
 
