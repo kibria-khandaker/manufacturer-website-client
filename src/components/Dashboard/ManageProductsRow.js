@@ -19,7 +19,7 @@ const ManageProductsRow = ({ tool, index, setDeleteTools, refetch }) => {
             <td>{email}</td>
             <td className='text-center'>{quantity}</td>
             <td>
-                <label onClick={()=>setDeleteTools(tool)} for="confirm_delete" className="btn btnBgClr btn-xs">Delete</label>
+                <label onClick={()=>setDeleteTools(tool)} for="confirm_delete" className="btn btnBgClr btn-xs  text-white rounded">Delete</label>
                 
             </td>
 

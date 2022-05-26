@@ -1,10 +1,10 @@
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import LoadingSpinner from './../Common/AuthAdmin/LoadingSpinner';
-import { loadStripe } from '@stripe/stripe-js';
 import CheckoutForm from './CheckoutForm';
-import { Elements } from '@stripe/react-stripe-js';
 
 const stripePromise = loadStripe('pk_test_51L0jU3AqFvNpvzEjXvJSHCEO5ZVNPm48Hn4B6hWXI2xn76uf12GY4yX2y3TbwCNJDY8qaN5TdekYwQ6tTIIJ2Oiv00NeN1NxHu');
 

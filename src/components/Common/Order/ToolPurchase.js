@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import auth from './../../../firebase.init';
 import Order from './Order';
 
 const ToolPurchase = () => {

@@ -40,11 +40,11 @@ const Order = ({ purchaseTool }) => {
                     alert(' Thanks for booking the product, Hop Will Order again ')
                     navigate('/AllTools')
                     // window.location.reload() // suddenly toast not working so uninstalled it
-                   // toast(`Your Booking Prospering,`); // suddenly toast not working so uninstalled it
+                    // toast(`Your Booking Prospering,`); // suddenly toast not working so uninstalled it
                 } else {
                     alert('May be You Already Ordered the product , try with new once ')
-                   // toast.error(`Your Already Have booking`);
-                   navigate('/AllTools')
+                    // toast.error(`Your Already Have booking`);
+                    navigate('/AllTools')
 
                 }
             })
@@ -54,15 +54,25 @@ const Order = ({ purchaseTool }) => {
     // xxxxxxxxxxxxxxxx 
     const handleIncrement = () => {
         if (quantityCount < purchaseTool.quantity) {
-            setQuantityCount(quantityCount + 1)
-        }
+            setQuantityCount(parseInt(quantityCount)+ 1)
+        }return
     }
     const handleDecrement = () => {
         if (quantityCount > purchaseTool.minimumOrder) {
-            setQuantityCount(quantityCount - 1)
-        }
+            setQuantityCount(parseInt(quantityCount) - 1)
+        }return
     }
     // xxxxxxxxxxxxxxxx 
+    // const orderNumber = (event) => {
+    //     if (purchaseTool.minimumOrder > event.target.myOrderNumber.value) {
+    //         alert(`You need Minimum Order Value`)
+    //     }
+    //     if (purchaseTool.quantity < event.target.myOrderNumber.value) {
+    //         alert(`You Out Of Maximum stock`)
+    //     }
+
+    // }
+
     // xxxxxxxxxxxxxxxx 
     return (
         <div className='w-full '>
@@ -85,10 +95,19 @@ const Order = ({ purchaseTool }) => {
                     <span className='flex justify-between '>
                         <p onClick={handleIncrement} className='bgClr text-white px-5 py-2  rounded-l-md cursor-pointer ' >+</p>
                         {/* defaultValue  */}
-                        <input type="number" name='orderQuantity' value={quantityCount} className="input input-bordered rounded-none w-full" />
+                        <input type="number" name='orderQuantity' Value={quantityCount} className="input input-bordered rounded-none w-full" />
                         <p onClick={handleDecrement} className='bgClr text-white px-5 py-2 rounded-r-md cursor-pointer' >-</p>
                     </span>
-                    {/* <input className='border bgClr text-white' placeholder='1' type="number" name="orderAmount" id="orderAmount" /> */}
+                    {/* {
+
+                    }
+                    {
+                        (quantityCount < purchaseTool.minimumOrder) && `You need Minimum Order Value: ${quantityCount}`
+                    }
+                        <input onMouseOut={orderNumber} className='input input-bordered w-full mt-3' placeholder='555' type="number" name="myOrderNumber" id="orderAmount" />
+                    {
+                        (quantityCount > purchaseTool.quantity) && `You Out Of Maximum stock ${quantityCount}` 
+                    } */}
                 </p>
 
                 <p className=' text-right text-lg w-full'>

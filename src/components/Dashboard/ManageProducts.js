@@ -45,7 +45,7 @@ const ManageProducts = () => {
                                     refetch={refetch}
                                     setDeleteTools={setDeleteTools}
                                 ></ManageProductsRow>
-                            ))
+                            )).reverse()
                         }
 
                     </tbody>

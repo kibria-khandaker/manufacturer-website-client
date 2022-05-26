@@ -73,7 +73,7 @@ const MyOrders = () => {
                                         </div>}
                                     </td>
                                 </tr>
-                            ))
+                            )).reverse()
                         }
 
                     </tbody>

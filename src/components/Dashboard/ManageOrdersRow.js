@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ManageOrdersRow = ({ Order, index, setDeleteOrders, refetch }) => {
-    const { _id, transactionId,paid, bookToolsId, bookTools, bookUserName, bookUserEmail, bookPrice, bookQuantity, bookUserAddress, bookUserPhone } = Order;
+    const { _id, transactionId, paid, bookToolsId, bookTools, bookUserName, bookUserEmail, bookPrice, bookQuantity, bookUserAddress, bookUserPhone } = Order;
 
+    const [quantityCount, setQuantityCount] = useState(false)
+    const statusOrd = () => {
+        if (quantityCount) {
+            setQuantityCount(true)
+        } return
+    }
 
 
     return (
@@ -14,18 +20,27 @@ const ManageOrdersRow = ({ Order, index, setDeleteOrders, refetch }) => {
                 {
                     (transactionId)
                         ?
-                        <>
-                            <button class="btn btn-xs text-green-500 bg-green-100 border-0 rounded mt-1">Payment Completed</button>
-                            <br />
-                            <button class="btn btn-xs text-green-500 bg-green-100 border-0 rounded mt-1">Payment Completed</button>
-                        </>
+                        <div>
+                            <button onClick={() => statusOrd(setQuantityCount(!false))} class="btn btn-xs text-white border-0 rounded mt-1">
+                                status:
+                            </button>
+                            {
+                                (quantityCount === false) && <span className=' text-orange-500 font-bold'> Pending </span>
+                            }
+                            {
+                                (quantityCount === true) && <span className=' text-green-500 font-bold'> Shipped  </span>
+                            }
+
+                            <p className='text-green-500 my-0 py-0'> Payment Completed </p>
+                        </div>
                         :
-                        <>
-                            No
-                        </>
+                        <div>
+                            <p><label onClick={() => setDeleteOrders(Order)} for="confirm_delete" className="btn  text-white border-0 rounded mt-1 btnBgClr btn-xs">Delete</label></p>
+                            <p className='text-red-500 my-0 py-0'>Payment Unpaid </p>
+                        </div>
                 }
                 {/* <p>{transactionId && <p className=' text-green-500'> Payment Completed </p>}</p> */}
-                <p><label onClick={() => setDeleteOrders(Order)} for="confirm_delete" className="btn  border-0 rounded mt-1 btnBgClr btn-xs">Delete</label></p>
+
             </td>
 
 

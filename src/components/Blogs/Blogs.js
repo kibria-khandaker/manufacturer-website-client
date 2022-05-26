@@ -51,12 +51,16 @@ const Blogs = () => {
 
 
             {/* --------------------------------------  */}
-            <div className="divider"></div>
+            <div className="divider"></div> 
 
             <h2 className=' font-bold'> Question 14.5: You have an array of products. Each object has a name, price, description, etc. How will you implement a search to find products by name? </h2>
             <p> <span className=' font-bold'> Answer: </span> <br />
 
-                need to write Js code here for the answer , code are commented
+                <div>
+                    <img className='my-5 p-5' src="https://i.ibb.co/TgHz5CB/Screenshot-1886.png" alt="search to find products by name" />
+                   
+                    <p><b> Code Link in my Github gist :</b>  https://gist.github.com/kibria-khandaker/e3cabd72fac7b66a2fd5605c5520946f </p>
+                </div>
                 {/*
             
                 function search(nameKey, myArray){
