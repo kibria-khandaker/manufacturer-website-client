@@ -4,7 +4,7 @@ const MyOrdersDelete = ({ openDeleteModal, setOpenDeleteModal }) => {
     const { _id, bookTools, bookUserName } = openDeleteModal;
 
     const handelDelete = () => {
-        fetch(`http://localhost:5000/booking/${_id}`, {
+        fetch(`https://obscure-atoll-49533.herokuapp.com/booking/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

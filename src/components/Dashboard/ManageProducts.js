@@ -7,7 +7,7 @@ import ProductsDeleteModal from './ProductsDeleteModal';
 const ManageProducts = () => {
     const [deleteTools , setDeleteTools] = useState(null)
     const { data: manageTools, isLoading, refetch } = useQuery('toolsManage', () =>
-        fetch('http://localhost:5000/tools/manage', {
+        fetch('https://obscure-atoll-49533.herokuapp.com/tools/manage', {
             headers: {
                 'content-type': 'application/json',
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

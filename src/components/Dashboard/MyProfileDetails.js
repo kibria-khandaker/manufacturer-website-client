@@ -7,7 +7,7 @@ import LoadingSpinner from '../Common/AuthAdmin/LoadingSpinner';
 const MyProfileDetails = () => {
     const [user, loading, error] = useAuthState(auth);
 
-    const { data: profiles, isLoading, refetch } = useQuery('UserProfile', () => fetch(`http://localhost:5000/profile/`)
+    const { data: profiles, isLoading, refetch } = useQuery('UserProfile', () => fetch(`https://obscure-atoll-49533.herokuapp.com/profile/`)
         .then(res => res.json())
     )
     if (isLoading || loading) {
