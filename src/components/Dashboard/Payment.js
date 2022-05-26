@@ -59,7 +59,7 @@ const Payment = () => {
                         <p className=' text-center px-10 '> <b>NB:</b> <b className='textClr'>Place wait</b> until see you Payment Conformation Message </p>
                         <hr />
                         <Elements stripe={stripePromise}>
-                            <CheckoutForm orderItems={orderItems}  />
+                            <CheckoutForm orderItems={orderItems} />
                         </Elements>
 
                     </div>

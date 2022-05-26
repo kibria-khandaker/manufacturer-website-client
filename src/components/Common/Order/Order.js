@@ -12,11 +12,6 @@ const Order = ({ purchaseTool }) => {
     // xxxxxxxxxxxxxxxx 
     const handleOrder = event => {
         event.preventDefault();
-
-        // const calculation = {
-
-        // }
-
         const booking = {
 
             bookToolsId: purchaseTool._id,
@@ -44,7 +39,7 @@ const Order = ({ purchaseTool }) => {
                 if (data.success) {
                     alert(' Thanks for booking the product, Hop Will Order again ')
                     navigate('/AllTools')
-                    // window.location.reload()
+                    // window.location.reload() // suddenly toast not working so uninstalled it
                    // toast(`Your Booking Prospering,`); // suddenly toast not working so uninstalled it
                 } else {
                     alert('May be You Already Ordered the product , try with new once ')

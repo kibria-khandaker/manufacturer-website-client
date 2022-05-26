@@ -29,11 +29,11 @@ const ManageAllOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th> Order's Product </th>
+                            <th> Order's Items Name </th>
+                            <th> Status </th>
                             <th> Order By </th>
-                            <th> Order owner Address </th>
+                            <th> Order Owner Address </th>
                             <th className='text-center'> Quantity </th>
-                            <th> Action </th>
                         </tr>
                     </thead>
                     <tbody>
