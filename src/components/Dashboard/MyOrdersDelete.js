@@ -27,7 +27,7 @@ const MyOrdersDelete = ({ openDeleteModal, setOpenDeleteModal }) => {
                 <div className="modal-box">
                     <h3 className=" text-lg textClr">Hello, Mr: <span className='font-bold'> {bookUserName}</span> </h3>
                     <p className="py-4">
-                        Remember, if delete it, will be permanently removed from database, Are You Sure , You want to Delete :
+                        Remember, if delete it, will be permanently removed from Order history, Are You Sure , You want to Delete :
                         <b> { bookTools } </b>
                     </p>
                     <div className="modal-action justify-around">

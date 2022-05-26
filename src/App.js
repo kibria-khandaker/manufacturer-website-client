@@ -19,6 +19,7 @@ import MyProfile from './components/Dashboard/MyProfile';
 import MyProfilePortfolio from './components/Dashboard/MyProfilePortfolio';
 import Payment from './components/Dashboard/Payment';
 import Users from './components/Dashboard/Users';
+import AllTools from './components/Home/AllTools';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound';
 import Reviews from './components/Reviews';
@@ -36,6 +37,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/Reviews" element={<Reviews />} />
+          <Route path="/AllTools" element={<AllTools />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
 
 

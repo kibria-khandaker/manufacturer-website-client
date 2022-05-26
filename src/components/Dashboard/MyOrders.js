@@ -63,8 +63,8 @@ const MyOrders = () => {
                                     <td>
                                         {
                                             (tool.bookPrice && !tool.paid) && <div>
-                                                <Link to={`/dashboard/payment/${tool._id}`}><button className="btn bg-orange-500 border-0 rounded btn-xs">Pay</button></Link>
-                                                <label onClick={() => setOpenDeleteModal(tool)} for="myOrder_delete" className="btn btnBgClr btn-xs border-0 rounded mx-2"> Cancel </label>
+                                                <Link to={`/dashboard/payment/${tool._id}`}><button className="btn bg-orange-500 border-0 rounded px-7 btn-xs">Pay</button></Link>
+                                                <label onClick={() => setOpenDeleteModal(tool)} for="myOrder_delete" className="btn btnBgClr btn-xs border-0 rounded mx-5"> Cancel </label>
                                             </div>
                                         }
                                         {(tool.bookPrice && tool.paid) && <div>

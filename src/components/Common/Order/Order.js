@@ -43,13 +43,13 @@ const Order = ({ purchaseTool }) => {
             .then(data => {
                 if (data.success) {
                     alert(' Thanks for booking the product, Hop Will Order again ')
-                    navigate('/home')
+                    navigate('/AllTools')
                     // window.location.reload()
                    // toast(`Your Booking Prospering,`); // suddenly toast not working so uninstalled it
                 } else {
                     alert('May be You Already Ordered the product , try with new once ')
                    // toast.error(`Your Already Have booking`);
-                   navigate('/home')
+                   navigate('/AllTools')
 
                 }
             })
@@ -107,7 +107,7 @@ const Order = ({ purchaseTool }) => {
                 <input type="submit" value="Complete Order" className="btn btnBgClr text-white w-full" />
             </form>
 
-            <Link className=' bgClr text-white rounded-lg px-3 py-2 mt-24 inline-block mx-auto text-center' to='/'> Back to Order for another Tools </Link>
+            <Link className=' bgClr text-white rounded-lg px-3 py-2 mt-24 inline-block mx-auto text-center' to='/AllTools'> Back to Order for another Tools </Link>
             {/* xxxxxxxxxxxxxxxx  */}
         </div>
     );

@@ -41,6 +41,7 @@ const ToolPurchase = () => {
             <Order
                 purchaseTool={purchaseTool}
             ></Order>
+            
         </div>
     );
 };

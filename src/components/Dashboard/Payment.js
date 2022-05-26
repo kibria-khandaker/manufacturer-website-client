@@ -35,7 +35,7 @@ const Payment = () => {
                 <div className="card w-50 max-w-md bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title"> Hello Mr! {orderItems.bookUserName} </h2>
-                        <p className='textClr'>Your Booked Item's Details</p>
+                        <p className=' text-orange-600'>Your Booked Item's Details</p>
                         <div className=' text-xs'>
                             <p> <b> Order Quantity :</b> {orderItems.bookQuantity} </p>
                             <p> <b> Product Name :</b> {orderItems.bookTools} </p>
@@ -46,7 +46,7 @@ const Payment = () => {
                             <p> <b> Your Address :</b> {orderItems.bookUserAddress} </p>
                         </div>
                         <div class="card-actions justify-end">
-                            <p className='textClr'>Please pay
+                            <p className='text-orange-600'>Please pay
                                 <b> ( {orderItems.bookPrice}$ ) </b> for
                                 <b> ( {orderItems.bookTools} ) </b>
                             </p>
@@ -56,13 +56,15 @@ const Payment = () => {
                 {/* payment box start  */}
                 <div className="card my-4 flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
                     <div className="card-body">
-                        
-                        <Elements stripe={stripePromise}> 
-                            <CheckoutForm orderItems={orderItems} />
+                        <p className=' text-center px-10 '> <b>NB:</b> <b className='textClr'>Place wait</b> until see you Payment Conformation Message </p>
+                        <hr />
+                        <Elements stripe={stripePromise}>
+                            <CheckoutForm orderItems={orderItems}  />
                         </Elements>
 
                     </div>
                 </div>
+
             </div>
 
             {/* ----------------------------------------  */}
