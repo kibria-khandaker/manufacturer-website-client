@@ -20,8 +20,21 @@ const Blogs = () => {
             <p> <span className=' font-bold'> Answer: </span> <br />
 
                 The Four Kinds of React State to Manage:
-                (1) Local state , (2) Global state, (3)Server state, (4) URL state
+                <b>(1) Local state, (2) Global state, (3)Server state, (4) URL state</b>
 
+                <br />
+                <br />
+                <b>More Details:</b>
+                <br />
+                <p><b>(1) Local state: </b> Local state is data we tend to manage in one or another component. native state is most frequently managed in React exploitation the useState hook.</p>
+
+                <p><b>(2) Global state :</b> Global state is important after we wish to induce and update information anyplace in our app, or in multiple elements a minimum of.
+                </p>
+
+                <p><b>(3)Server state :</b> Server state may be a easy concept, however are often onerous to manage aboard all of our local and global UI state.</p>
+
+                <p><b>(4) URL state : </b> URL state is commonly missing as a category of state, however it's a very important one.
+                    In several cases, a lot of major elements of our application rely on accessing url state. try and imagine building a web log while not having the ability to fetch a post based mostly off of its slug or id that's located within the URL! </p>
             </p>
 
 
@@ -51,14 +64,14 @@ const Blogs = () => {
 
 
             {/* --------------------------------------  */}
-            <div className="divider"></div> 
+            <div className="divider"></div>
 
             <h2 className=' font-bold'> Question 14.5: You have an array of products. Each object has a name, price, description, etc. How will you implement a search to find products by name? </h2>
             <p> <span className=' font-bold'> Answer: </span> <br />
 
                 <div>
                     <img className='my-5 p-5' src="https://i.ibb.co/TgHz5CB/Screenshot-1886.png" alt="search to find products by name" />
-                   
+
                     <p><b> Code Link in my Github gist :</b>  https://gist.github.com/kibria-khandaker/e3cabd72fac7b66a2fd5605c5520946f </p>
                 </div>
                 {/*
