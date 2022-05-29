@@ -4,13 +4,6 @@
 
 ### My project Live link, And click [Here](https://construction-tools-36dcf.web.app/) to view it in your browser.
 
-<br/> 
-<br/> 
-
-For Examiner test my project
-
-- User: phero@phero.com
-- pass: 123456
 
 
 <br/> 
