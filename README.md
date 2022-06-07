@@ -4,23 +4,26 @@
 
 ### My project Live link, And click [Here](https://construction-tools-36dcf.web.app/) to view it in your browser.
 
-
-
 <br/> 
-<br/> 
+<br/>
 
 #### Firebase Hosting Both links here:
+
 ##### Or, Copy/Click the link [https://construction-tools-36dcf.web.app/](https://construction-tools-36dcf.web.app/)
+
 ##### Or, Copy/Click the link [https://construction-tools-36dcf.firebaseapp.com/](https://construction-tools-36dcf.firebaseapp.com/)
 
 <br /><br /><br />
 
 > #### Some notes about My ( Construction Tools Manufacturer ) React Project
 
-- Site deploy in google firebase Hosting.
-- I make The Project based on `React` `node.js` and `Express`
+- Details: Manufacturer items Order and payment system, Able to control admin gereral role, Authentication
+- Technology: React.js, tailwindCSS, Node.js, Express.js, MongoDB, Firebase-Authentication & Heroku, dotenv, CORS, JWT, react-firebase-hooks, react-icons, react-router-dom,
+
+<br /><br />
 
 > #### Here Some Package use for the project:
+
 - daisyui: v2.15.0,
 - firebase: v9.8.1,
 - react: v18.1.0,
