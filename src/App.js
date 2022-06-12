@@ -21,6 +21,7 @@ import Payment from './components/Dashboard/Payment';
 import Users from './components/Dashboard/Users';
 import AllTools from './components/Home/AllTools';
 import Home from './components/Home/Home';
+import SingleItemsDetails from './components/Home/SingleItemsDetails';
 import NotFound from './components/NotFound';
 import Reviews from './components/Reviews';
 
@@ -39,7 +40,7 @@ function App() {
           <Route path="/Reviews" element={<Reviews />} />
           <Route path="/AllTools" element={<AllTools />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
-
+          <Route path="/SingleItemsDetails/:id" element={<SingleItemsDetails />} />
 
           <Route path="/purchase/:id" element={
             <RequireAuth>
