@@ -20,7 +20,7 @@ const CheckoutForm = ({ orderItems }) => {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://manufacturer-website-server-kappa.vercel.app/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const CheckoutForm = ({ orderItems }) => {
                 transactionId:paymentIntent.id,
             }
 
-            fetch(`http://localhost:5000/booking/payment/${_id}`,{
+            fetch(`https://manufacturer-website-server-kappa.vercel.app/booking/payment/${_id}`,{
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

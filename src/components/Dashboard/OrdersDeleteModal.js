@@ -4,7 +4,7 @@ const OrdersDeleteModal = ({ deleteOrders, refetch, setDeleteOrders }) => {
     const { bookTools, _id } = deleteOrders;
 
     const handelDelete = () => {
-        fetch(`http://localhost:5000/booking/manage/${_id}`, {
+        fetch(`https://manufacturer-website-server-kappa.vercel.app/booking/manage/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

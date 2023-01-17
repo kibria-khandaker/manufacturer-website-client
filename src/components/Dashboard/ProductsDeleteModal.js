@@ -4,7 +4,7 @@ const ProductsDeleteModal = ({ deleteTools, refetch, setDeleteTools }) => {
     const { name, _id } = deleteTools;
 
     const handelDelete = () => {
-        fetch(`http://localhost:5000/tools/manage/${_id}`, {
+        fetch(`https://manufacturer-website-server-kappa.vercel.app/tools/manage/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

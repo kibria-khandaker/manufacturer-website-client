@@ -44,7 +44,7 @@ const MyProfile = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('http://localhost:5000/profile', {
+                    fetch('https://manufacturer-website-server-kappa.vercel.app/profile', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

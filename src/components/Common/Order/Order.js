@@ -27,7 +27,7 @@ const Order = ({ purchaseTool }) => {
 
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://manufacturer-website-server-kappa.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -3,7 +3,7 @@ import React from 'react';
 const UsersRow = ({ user,index, refetch }) => {
     const { email, role } = user;
     const makeToAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://manufacturer-website-server-kappa.vercel.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

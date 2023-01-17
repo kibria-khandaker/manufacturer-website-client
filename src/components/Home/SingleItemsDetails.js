@@ -12,7 +12,7 @@ const SingleItemsDetails = () => {
 
     const { data: purchaseTool, isLoading, refetch } =
         useQuery('purchaseTool', () =>
-            fetch(`http://localhost:5000/tools/${id}`).then(res => res.json()))
+            fetch(`https://manufacturer-website-server-kappa.vercel.app/tools/${id}`).then(res => res.json()))
     if (isLoading) {
         return <p> Loading ....!</p>
     }

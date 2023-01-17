@@ -39,7 +39,7 @@ const AddProduct = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('http://localhost:5000/tools', {
+                    fetch('https://manufacturer-website-server-kappa.vercel.app/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

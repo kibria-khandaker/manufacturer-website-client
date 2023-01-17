@@ -8,7 +8,7 @@ import OrdersDeleteModal from './OrdersDeleteModal';
 const ManageAllOrders = () => {
     const [deleteOrders , setDeleteOrders] = useState(null)
     const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () =>
-        fetch('http://localhost:5000/booking/manage', {
+        fetch('https://manufacturer-website-server-kappa.vercel.app/booking/manage', {
             headers: {
                 'content-type': 'application/json',
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

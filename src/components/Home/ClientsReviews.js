@@ -7,7 +7,7 @@ const ClientsReviews = () => {
     const [customerReviews, setCustomerReviews] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://manufacturer-website-server-kappa.vercel.app/review')
             .then(res => res.json())
             .then(data => setCustomerReviews(data))
     }, [customerReviews])

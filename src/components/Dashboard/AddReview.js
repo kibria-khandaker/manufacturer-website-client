@@ -36,7 +36,7 @@ const AddReview = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://manufacturer-website-server-kappa.vercel.app/review', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

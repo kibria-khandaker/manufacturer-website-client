@@ -15,7 +15,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking?bookUserEmail=${user.email}`, {
+            fetch(`https://manufacturer-website-server-kappa.vercel.app/booking?bookUserEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
