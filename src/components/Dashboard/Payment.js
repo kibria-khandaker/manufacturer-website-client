@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L0jU3AqFvNpvzEjXvJSHCEO5ZVNPm48Hn4B6
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://obscure-atoll-49533.herokuapp.com/booking/payment/${id}`;
+    const url = `http://localhost:5000/booking/payment/${id}`;
 
     const { data: orderItems, isLoading, refetch } = useQuery(['bookingPayment', id], () => fetch(url, {
         method: 'GET',
@@ -86,4 +86,4 @@ export default Payment;
 // _id: "628e10537ee8500bd847e0d2"
 
 
-//API:   https://obscure-atoll-49533.herokuapp.com/booking/payment/628e10537ee8500bd847e0d2  
+//API:   http://localhost:5000/booking/payment/628e10537ee8500bd847e0d2  

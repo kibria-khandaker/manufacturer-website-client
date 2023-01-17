@@ -39,7 +39,7 @@ const AddProduct = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('https://obscure-atoll-49533.herokuapp.com/tools', {
+                    fetch('http://localhost:5000/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

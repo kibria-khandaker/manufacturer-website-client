@@ -27,7 +27,7 @@ const Order = ({ purchaseTool }) => {
 
         }
 
-        fetch('https://obscure-atoll-49533.herokuapp.com/booking', {
+        fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

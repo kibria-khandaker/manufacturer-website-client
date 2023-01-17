@@ -44,7 +44,7 @@ const MyProfile = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('https://obscure-atoll-49533.herokuapp.com/profile', {
+                    fetch('http://localhost:5000/profile', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

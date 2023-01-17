@@ -36,7 +36,7 @@ const AddReview = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('https://obscure-atoll-49533.herokuapp.com/review', {
+                    fetch('http://localhost:5000/review', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

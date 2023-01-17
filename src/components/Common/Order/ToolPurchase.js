@@ -12,7 +12,7 @@ const ToolPurchase = () => {
 
     const { data: purchaseTool, isLoading, refetch } =
         useQuery('purchaseTool', () =>
-            fetch(`https://obscure-atoll-49533.herokuapp.com/tools/${id}`).then(res => res.json()))
+            fetch(`http://localhost:5000/tools/${id}`).then(res => res.json()))
     if (isLoading) {
         return <p> Loading ....!</p>
     }

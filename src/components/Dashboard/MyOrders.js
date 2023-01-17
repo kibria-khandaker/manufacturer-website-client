@@ -15,7 +15,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://obscure-atoll-49533.herokuapp.com/booking?bookUserEmail=${user.email}`, {
+            fetch(`http://localhost:5000/booking?bookUserEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
