@@ -1,9 +1,10 @@
 import React from 'react';
+import { BASE_URL } from '../../utils/config';
 
 const UsersRow = ({ user,index, refetch }) => {
     const { email, role } = user;
     const makeToAdmin = () => {
-        fetch(`https://manufacturer-website-server-kappa.vercel.app/user/admin/${email}`, {
+        fetch(`${BASE_URL}/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

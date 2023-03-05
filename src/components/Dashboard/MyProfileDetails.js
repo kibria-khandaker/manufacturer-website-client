@@ -2,12 +2,13 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
+import { BASE_URL } from '../../utils/config';
 import LoadingSpinner from '../Common/AuthAdmin/LoadingSpinner';
 
 const MyProfileDetails = () => {
     const [user, loading, error] = useAuthState(auth);
 
-    const { data: profiles, isLoading, refetch } = useQuery('UserProfile', () => fetch(`https://manufacturer-website-server-kappa.vercel.app/profile/`)
+    const { data: profiles, isLoading, refetch } = useQuery('UserProfile', () => fetch(`${BASE_URL}/profile/`)
         .then(res => res.json())
     )
     if (isLoading || loading) {

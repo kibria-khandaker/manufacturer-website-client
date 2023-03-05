@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { BASE_URL } from '../../utils/config';
 import MyOrdersDelete from './MyOrdersDelete';
 
 
@@ -15,7 +16,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://manufacturer-website-server-kappa.vercel.app/booking?bookUserEmail=${user.email}`, {
+            fetch(`${BASE_URL}/booking?bookUserEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

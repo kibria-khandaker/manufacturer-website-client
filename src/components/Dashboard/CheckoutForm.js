@@ -1,5 +1,6 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { BASE_URL } from '../../utils/config';
 
 const CheckoutForm = ({ orderItems }) => {
     const stripe = useStripe();
@@ -20,7 +21,7 @@ const CheckoutForm = ({ orderItems }) => {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("https://manufacturer-website-server-kappa.vercel.app/create-payment-intent", {
+        fetch(`${BASE_URL}/create-payment-intent`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -89,7 +90,7 @@ const CheckoutForm = ({ orderItems }) => {
                 transactionId:paymentIntent.id,
             }
 
-            fetch(`https://manufacturer-website-server-kappa.vercel.app/booking/payment/${_id}`,{
+            fetch(`https://manufacturer-website-server-five.vercel.app/booking/payment/${_id}`,{
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

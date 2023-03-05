@@ -3,6 +3,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
+import { BASE_URL } from '../../utils/config';
 import LoadingSpinner from './../Common/AuthAdmin/LoadingSpinner';
 import CheckoutForm from './CheckoutForm';
 
@@ -10,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L0jU3AqFvNpvzEjXvJSHCEO5ZVNPm48Hn4B6
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://manufacturer-website-server-kappa.vercel.app/booking/payment/${id}`;
+    const url = `${BASE_URL}/booking/payment/${id}`;
 
     const { data: orderItems, isLoading, refetch } = useQuery(['bookingPayment', id], () => fetch(url, {
         method: 'GET',
@@ -86,4 +87,4 @@ export default Payment;
 // _id: "628e10537ee8500bd847e0d2"
 
 
-//API:   https://manufacturer-website-server-kappa.vercel.app/booking/payment/628e10537ee8500bd847e0d2  
+//API:   https://manufacturer-website-server-five.vercel.app/booking/payment/628e10537ee8500bd847e0d2  

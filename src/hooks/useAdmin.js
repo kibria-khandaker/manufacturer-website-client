@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BASE_URL } from '../utils/config';
 
 const useAdmin = (user) => {
     const [admin, setAdmin] = useState(false);
@@ -7,7 +8,7 @@ const useAdmin = (user) => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://manufacturer-website-server-kappa.vercel.app/admin/${email}`, {
+            fetch(`${BASE_URL}/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

@@ -1,10 +1,11 @@
 import React from 'react';
+import { BASE_URL } from '../../utils/config';
 
 const OrdersDeleteModal = ({ deleteOrders, refetch, setDeleteOrders }) => {
     const { bookTools, _id } = deleteOrders;
 
     const handelDelete = () => {
-        fetch(`https://manufacturer-website-server-kappa.vercel.app/booking/manage/${_id}`, {
+        fetch(`${BASE_URL}/booking/manage/${_id}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

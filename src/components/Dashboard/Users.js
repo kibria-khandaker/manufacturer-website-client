@@ -1,10 +1,11 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import { BASE_URL } from '../../utils/config';
 import LoadingSpinner from '../Common/AuthAdmin/LoadingSpinner';
 import UsersRow from './UsersRow';
 
 const Users = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://manufacturer-website-server-kappa.vercel.app/user`, {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`${BASE_URL}/user`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

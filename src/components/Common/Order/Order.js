@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import { BASE_URL } from '../../../utils/config';
 
 const Order = ({ purchaseTool }) => {
     // const { _id, name, email, category, supplier, price, quantity, minimumOrder, quality, img, shortDesc } = purchaseTool;
@@ -27,7 +28,7 @@ const Order = ({ purchaseTool }) => {
 
         }
 
-        fetch('https://manufacturer-website-server-kappa.vercel.app/booking', {
+        fetch(`${BASE_URL}/booking`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

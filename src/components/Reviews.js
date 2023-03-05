@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { ImStarFull } from "react-icons/im";
 import Rating from 'react-rating';
+import { BASE_URL } from '../utils/config';
 
 const Reviews = () => {
     const [customerReviews, setCustomerReviews] = useState([]);
 
     useEffect(() => {
-        fetch('https://manufacturer-website-server-kappa.vercel.app/review')
+        fetch(`${BASE_URL}/review`)
             .then(res => res.json())
             .then(data => setCustomerReviews(data))
     }, [customerReviews])

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useNavigate, useParams } from 'react-router-dom';
+import { BASE_URL } from '../../utils/config';
 
 const SingleItemsDetails = () => {
     // const [user, loading, error] = useAuthState(auth);
@@ -12,7 +13,7 @@ const SingleItemsDetails = () => {
 
     const { data: purchaseTool, isLoading, refetch } =
         useQuery('purchaseTool', () =>
-            fetch(`https://manufacturer-website-server-kappa.vercel.app/tools/${id}`).then(res => res.json()))
+            fetch(`${BASE_URL}/tools/${id}`).then(res => res.json()))
     if (isLoading) {
         return <p> Loading ....!</p>
     }

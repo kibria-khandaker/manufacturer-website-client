@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { BASE_URL } from '../../utils/config';
 
 const AddReview = () => {
     const [user] = useAuthState(auth)
@@ -36,7 +37,7 @@ const AddReview = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('https://manufacturer-website-server-kappa.vercel.app/review', {
+                    fetch(`${BASE_URL}/review`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

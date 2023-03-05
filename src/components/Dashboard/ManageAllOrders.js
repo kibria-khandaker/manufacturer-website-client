@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
+import { BASE_URL } from '../../utils/config';
 import LoadingSpinner from './../Common/AuthAdmin/LoadingSpinner';
 import ManageOrdersRow from './ManageOrdersRow';
 import OrdersDeleteModal from './OrdersDeleteModal';
@@ -8,7 +9,7 @@ import OrdersDeleteModal from './OrdersDeleteModal';
 const ManageAllOrders = () => {
     const [deleteOrders , setDeleteOrders] = useState(null)
     const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () =>
-        fetch('https://manufacturer-website-server-kappa.vercel.app/booking/manage', {
+        fetch(`${BASE_URL}/booking/manage`, {
             headers: {
                 'content-type': 'application/json',
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

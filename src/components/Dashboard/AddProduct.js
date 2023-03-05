@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
+import { BASE_URL } from '../../utils/config';
 
 const AddProduct = () => {
     const [user] = useAuthState(auth)
@@ -39,7 +40,7 @@ const AddProduct = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('https://manufacturer-website-server-kappa.vercel.app/tools', {
+                    fetch(`${BASE_URL}/tools`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

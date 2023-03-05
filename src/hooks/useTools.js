@@ -1,7 +1,8 @@
 import { useQuery } from 'react-query';
+import { BASE_URL } from './../utils/config';
 
 const useTools = () => {
-    const { data: tools, isLoading, refetch } = useQuery('toolsDatas', ()=>fetch('https://manufacturer-website-server-kappa.vercel.app/tools').then(res=>res.json()))
+    const { data: tools, isLoading, refetch } = useQuery('toolsDatas', ()=>fetch(`${BASE_URL}/tools`).then(res=>res.json()))
     return [tools, isLoading, refetch];
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
+import { BASE_URL } from '../../utils/config';
 import MyProfileDetails from './MyProfileDetails';
 
 const MyProfile = () => {
@@ -44,7 +45,7 @@ const MyProfile = () => {
                     }
 
                     // step-3: send post body in my MDB tools
-                    fetch('https://manufacturer-website-server-kappa.vercel.app/profile', {
+                    fetch(`${BASE_URL}/profile`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
