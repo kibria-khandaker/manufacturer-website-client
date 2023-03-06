@@ -8,8 +8,6 @@ const MyProfilePortfolio = () => {
     return (
         <div className=' py-36 bg-[#fd4475] bg-opacity-10 px-5 text-center'>
 
-
-
             <div className="card  lg:w-8/12 mx-auto bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="font-bold text-center pb-10"> My Portfolio </h2>
@@ -35,7 +33,7 @@ const MyProfilePortfolio = () => {
                     </div>
 
 
-                    <p className='text-left'><b>Here is my Some Project Link: </b></p>
+                    {/* <p className='text-left'><b>Here is my Some Project Link: </b></p>
                     <hr />
                     <div className='text-left  pb-10'>
                         <div>
@@ -53,7 +51,7 @@ const MyProfilePortfolio = () => {
                         </div>
 
                         <p className='px-10 pt-10'> <b> About all the projects </b> All project created with React Js and also used Node Express for server working purposes , For Database used Mongo-DB </p>
-                    </div>
+                    </div> */}
 
 
                     <p className='text-left'><b>About Me: </b></p>
@@ -81,12 +79,6 @@ const MyProfilePortfolio = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
 
         </div>
     );
