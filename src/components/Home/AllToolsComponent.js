@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const AllToolsComponent = ({ tool }) => {
     const navigate = useNavigate();
     return (
-        <div key={tool._id} className="card lg:card-side bg-base-100 shadow border">
+        <div key={tool._id} className="card lg:card-side bg-base-100 shadow border max-w-lg mx-auto">
             <figure className='lg:w-2/4  p-1 mx-auto' ><img className=' rounded-xl' src={tool.img} alt="Album" /></figure>
             <div className="card-body lg:w-2/4 ">
                 <h2 className="card-title"> {tool.name} </h2>

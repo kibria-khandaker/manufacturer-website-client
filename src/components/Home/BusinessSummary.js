@@ -14,7 +14,7 @@ const BusinessSummary = () => {
     '--thickness': '4px',
   }
   return (
-    <div className="hero mt-36 py-36  bg-[#fd4475] bg-opacity-5 px-16">
+    <div className="hero mt-36 py-24  bg-[#fd4475] bg-opacity-5 px-16">
       <div className="hero-content text-center">
         <div className="">
           <h1 className="text-4xl font-bold mb-10 text-[#fd4475] "> Our Business </h1>

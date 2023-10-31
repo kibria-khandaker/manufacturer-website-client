@@ -16,7 +16,7 @@ const ClientsReviews = () => {
     // console.log(customerReviews);
 
     return (
-        <div className=' pb-40 pt-32  bg-[#fd4475] bg-opacity-5 '>
+        <div className=' py-24  bg-[#fd4475] bg-opacity-5 '>
             <h2 className='text-[#fd4475] text-center text-4xl font-bold mb-14 '> Clients Reviews </h2>
             <div className='w-8/12 grid  md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto'>
                 {
