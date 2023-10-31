@@ -35,3 +35,13 @@
 - react-rating: v2.0.5,
 - react-router-dom: v6.3.0,
 - And all image from (Google or other's Free Resources) for the Services/Blog And in others pages
+
+```bash
+
+npm start
+
+npm run build
+
+firebase deploy
+
+```
